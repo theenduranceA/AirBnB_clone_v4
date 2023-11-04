@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/scripts/2-hbnb.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?{{cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?{{cache-id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?{{cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{cache_id}}" />
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{cache_id}}" />
+    <link rel="icon" href="../static/images/icon.png?{{cache_id}}" />
+    <title>HBnB</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+    </header>
+    <div class="container">
+      <section class="filters">
+	<div class="locations"> 
+	  <h3>States</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      {% for state in states %}
+	      <li>
+		<h2>{{ state[0].name }}:</h2>
+		<ul>
+		  {% for city in state[1] %}
+		  <li>{{ city.name }}</li>
+		  {% endfor %}
+		</ul>
+	      </li>
+	      {% endfor %}
+	    </ul>
+	  </div>
+	</div>
+	<div class="amenities">
+	  <h3>Amenities</h3>
+	  <h4 class="ellipsis-text">&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	    	<li><input type="checkbox" data-id="amenity_1" data-name="SWIMMING POOL">SWIMMING POOL</li>
+			<li><input type="checkbox" data-id="amenity_2" data-name="Wi-Fi">Wi-Fi</li>
+			<li><input type="checkbox" data-id="amenity_3" data-name="GYMNASIUM">GYMNASIUM</li>
+			<li><input type="checkbox" data-id="amenity_4" data-name="BREAKFAST">BREAKFAST</li>
+			<li><input type="checkbox" data-id="amenity_5" data-name="LAUNDRY">LAUNDRY</li>
+	    </ul>
+	  </div>
+	</div>
+	<button type="button">Search</button>
+      </section>
+      <div class="placesh1"><h1>Places</h1></div>
+      <section class="places">
+	<!-- <h1>Places</h1> -->
+	<article>
+	  <div class="title_box">
+	    <h2>ENDY'S LODGE</h2>
+	    <div class="price_by_night">$100</div>
+	  </div>
+	  <div class="information">
+	    <div class="max_guest">3 Guests</div>
+            <div class="number_rooms">3 Bedrooms</div>
+            <div class="number_bathrooms">3 Bathrooms</div>
+	  </div>
+	  <div class="user">
+            <b>Owner:</b> ENDURANCE EMMANUEL
+          </div>
+          <div class="description">
+			Nestled in a picturesque setting, our enchanting hotel offers an inviting escape with an ambiance that exudes warmth and tranquility. From the moment you step inside, you'll be embraced by a cozy atmosphere, where every detail has been thoughtfully designed to create a haven of comfort and relaxation. Immerse yourself in the serenity of our charming retreat, where impeccable service and elegant decor harmonize to provide an unforgettable stay. Whether you're seeking a romantic getaway or a peaceful retreat, our lovely hotel promises a delightful experience that will leave you with cherished memories.
+          </div>
+	</article>
+      </section>
+    </div>
+    <footer>
+      <p>Holberton School</p>
+    </footer>
+  </body>
+</html>
