@@ -38,14 +38,11 @@
 	</div>
 	<div class="amenities">
 	  <h3>Amenities</h3>
-	  <h4 class="ellipsis-text">&nbsp;</h4>
+	  <h4>&nbsp;</h4>
 	  <div class="popover">
 	    <ul>
-	    	<li><input type="checkbox" data-id="amenity_1" data-name="SWIMMING POOL">SWIMMING POOL</li>
-			<li><input type="checkbox" data-id="amenity_2" data-name="Wi-Fi">Wi-Fi</li>
-			<li><input type="checkbox" data-id="amenity_3" data-name="GYMNASIUM">GYMNASIUM</li>
-			<li><input type="checkbox" data-id="amenity_4" data-name="BREAKFAST">BREAKFAST</li>
-			<li><input type="checkbox" data-id="amenity_5" data-name="LAUNDRY">LAUNDRY</li>
+		    {% for amenity in amenities %}
+		    <li><input type="checkbox" data-id="{{amenity_id}}" data-name="{{amenity_name}}" > {{ammenity_name}} </li>
 	    </ul>
 	  </div>
 	</div>
