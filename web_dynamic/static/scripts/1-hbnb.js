@@ -15,7 +15,6 @@ $(document).ready(function () {
         const amenitiesList = Object.values(amenityIds).join(', ');
         const $h4 = $('.amenities h4');
         $h4.text(amenitiesList);
-        $h4.addClass('ellipsis-text');
         $h4.attr('title', amenitiesList);
     });
 });
